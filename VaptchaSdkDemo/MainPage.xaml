@@ -9,6 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="430">
+            <WebView x:Name="vaptcha_web" Width="430" Height="330" Source="http://127.0.0.0" Visibility="Collapsed" />
+            <TextBlock Name="debug" Text="debug:"  HorizontalAlignment="Stretch" TextWrapping="Wrap" Width="430"/>
+            <Button Name="click" Content="Click me" HorizontalAlignment="Stretch" Margin="0,20,0,0" Click="click_Click"/>
+        </StackPanel>
     </Grid>
 </Page>
