@@ -9,6 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <ToggleSwitch Name="DownTime" Header="DownTime" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,50,0,0"/>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="430">
             <WebView x:Name="vaptcha_web" Width="430" Height="330" Source="http://127.0.0.0" Visibility="Collapsed" />
             <TextBlock Name="debug" Text="debug:"  HorizontalAlignment="Stretch" TextWrapping="Wrap" Width="430"/>

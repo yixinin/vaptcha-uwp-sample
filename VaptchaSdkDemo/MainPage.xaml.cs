@@ -35,8 +35,11 @@ namespace VaptchaSdkDemo
 
         private async void click_Click(object sender, RoutedEventArgs e)
         {
-
-            var data = await vaptcha.GetChallengeAsync();
+            VaptchaSdk.UWP.Models.VaptchaModel data;
+            if (DownTime.IsOn)
+                data = await vaptcha.GetDownTimeChallengeAsync();
+            else
+                data = await vaptcha.GetChallengeAsync();
             if (!data.isDown)
             {
                 var text = $"vid:{data.challenge.id}, challenge:{data.challenge.challenge}";
